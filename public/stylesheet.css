@@ -1,0 +1,18 @@
+footer.well {
+    background-color: black;
+    border: 1px solid black;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+button {
+    height: 250px;
+    width: 250px;
+    border-radius: 25px;
+}

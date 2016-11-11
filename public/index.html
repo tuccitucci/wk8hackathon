@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DARE, A social App</title>
+    <title>I DARE YOU, A social App</title>
 
     <!--====================================================================
         Script Tags go here
@@ -18,15 +18,104 @@
       =======================================================================-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body ng-controller='DareController as dare'>
-    {{dare.greeting}}
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <div class="nav navbar-nav navbar-left">
+                    <img class='nav-logo' src='logo.png' style='width:15%' />
+                    <span style='color:white'>
+                    I Dare You
+                    </span>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class='glyphicon glyphicon-home'></span> Home</a></li>
+                    <li><a href="#play"><span class='glyphicon glyphicon-knight'></span> How To Play</a></li>
+                    <li><a href="#about"><span class='glyphicon glyphicon-sunglasses'></span> About</a></li>
+                    <li><a href='#'><span class='glyphicon glyphicon-user'></span> Sign-Up</a></li>
+                    <li><a href='#'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <form class="" action="index.html" method="post">
+    </form>
+    <section class='play'>
+        <h2>How to Play</h2>
+        <p>
+            It's a super easy social drinking game where a random name, backstory and task to complete is generated on click. You can become anyone, even your Uncle. All you have to do is Sign-Up or Log-In and let the shenanigans begin. Have your friends join in
+            for the fun, because the more the merrier. Let them score you on you tasks completed based on a simple YES, NO, MAYBE for the completion of the task.
+        </p>
+        <ul>
+            <li>Steps to Play</li>
+            <li>1. Sign-Up</li>
+            <li>2. Connect with Friends</li>
+            <li>3. Make a fool of yourself.</li>
+        </ul>
+    </section>
+    <section class='character'>
+        <form class="form-control">
+          {{dare.newCharacter.name}}
+        </form>
+        <form class="form-control">
+          {{dare.newCharacter.story}}
+        </form>
+        <form class="form-control">
+          {{dare.newTask.task}}
+        </form>
+    </section>
 
+    <section>
+        <button class='btn btn-success center-block' ng-click="dare.getInfo()"><h1>Click me</h1></button>
+    </section>
+    <section class='about'>
+        <h2>About the Team</h2>
+        <section id="work-process">
+            <div class="container">
+                <hr>
+                <div class="row wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-lg-1">
+                        <!--Offset Test  -->
+                    </div>
+                    <div class="col-lg-2">
+                        <h4>Aryan</h4>
+                    </div>
+                    <div class="col-lg-2">
+                        <h4>Thomas</h4>
+                    </div>
+                    <div class="col-lg-2">
+                        <h4>Jeff</h4>
+                    </div>
+                    <div class="col-lg-2">
+                        <h4>Shane</h4>
+                    </div>
+                    <div class="col-lg-2">
+                        <h4>Joshua</h4>
+                    </div>
+                    <div class="col-lg-1">
+                        <!--Offset Test  -->
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
+    </section>
 </body>
+
+<footer class="container-fluid text-center well">
+    <img src="logo.png" style='width:10%' />
+    <h4 class="text-center blackborder">&copy; Copyright 2016 I Dare You & Shenanigans Productions</h4>
+</footer>
 
 </html>
